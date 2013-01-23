@@ -1,0 +1,18 @@
+# Thinking
+
+A simple blog system basic on [ThinkPHP](thinkphp.cn).
+
+## Warning!
+
+Don't use this repo in production, as the code is very low quality.
+
+
+## Thoughts (Rants) about ThinkPHP
+
+I just want to walk through the code of ThinkPHP, but it's easily to realize
+that the code of ThinkPHP is low quality and this framework didn't design very
+well...
+
+## LICENSE
+
+[unlicense](unlicense.org)
