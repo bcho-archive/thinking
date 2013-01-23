@@ -21,7 +21,7 @@ class UserModel extends Model {
      * @salt string: encrypt salt
      * @return string
      */
-    protected function encrypt($raw, $salt=null) {
+    public function encrypt($raw, $salt=null) {
         if ($salt === null) {
             $salt = C('HASH_SALT');
         }
@@ -31,6 +31,17 @@ class UserModel extends Model {
     public function get_user($id) {
         $cond = array(
             'id' => array('eq', $id),
+        );
+        $ret = $this->where($cond)->limit(1)->select();
+        if (count($ret) === 1) {
+            return $ret[0];
+        }
+        return null;
+    }
+
+    public function get_user_by_email($email) {
+        $cond = array(
+            'email' => array('eq', $email),
         );
         $ret = $this->where($cond)->limit(1)->select();
         if (count($ret) === 1) {

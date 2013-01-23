@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>admin ~ thinking</title>
+    <link rel="stylesheet" href="{{ 'css/admin.css' | static_url }}" />
+  </head>
+  <body>
+    <div class="container">
+      <header id="header"></header>
+      <section id="main" role="main">
+        <table id="posts" class="table table-hover table-bordered">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>title</th>
+              <th>op.</th>
+            </tr>
+          </thead>
+          <tbody>
+          {% for post in posts %}
+            <tr>
+              <td>{{ post.id }}</td>
+              <td>{{ post.title }}</td>
+              <td>edit / delete</td>
+            </tr>
+          {% endfor %}
+          </tbody>
+        </table>
+        <div id="op" class="pull-right">
+          <a href="index.php?s=/admin/compose" class="btn btn-success">compose new</a>
+          <a href="index.php?s=/admin/logout" class="btn btn-danger">logout</a>
+        </div>
+      </section>
+      <footer id="footer"></footer>
+    </div>
+  </body>
+</html>

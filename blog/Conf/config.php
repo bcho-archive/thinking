@@ -5,7 +5,7 @@ require 'utils.php';
 
 $config['current'] = 'debug';
 $config['debug'] = array(
-    'URL_MODEL' => 2,
+    'URL_MODEL' => 3,
     'URL_CASE_INSENSITIVE' => true,
     'DEFAULT_MODULE' => 'Blog',
 
