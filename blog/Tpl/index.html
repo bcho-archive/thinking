@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block main %}
+{% for post in posts %}
+<article class="post">
+  <header>
+    {% block post_title %}<h1><a href="Blog/post/id/{{ post.id }}">{{ post.title }}</a></h1>{% endblock %}
+  </header>
+  <section class="content">
+    {{ post.content }}
+  </section>
+  <footer>
+    <div class="datetime misc">
+      <p>{{ post.created_date }}</p>
+    </div>
+    <div class="author misc">
+      <p>by {{ post.author.name }}</p>
+    </div>
+  </footer>
+</article>
+{% endfor %}
+{% endblock %}

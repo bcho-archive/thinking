@@ -1,0 +1,9 @@
+{% extends 'index.html' %}
+
+{% block title %}{{ post.title }} ~ {% endblock %}
+
+{% set posts = [post] %}
+
+{% block post_title %}
+<h1>{{ post.title }}</h1>
+{% endblock %}

@@ -1,0 +1,130 @@
+@import url(http://fonts.googleapis.com/css?family=Marko+One);
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after {
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+html {
+  font-family: 'Marko One', serif;
+  background-color: #fefefe;
+}
+
+h1 {
+  color: #555;
+  font-weight: 600;
+}
+
+.container {
+  width: 650px;
+  border: 3px dotted #333;
+  border-radius: 12px;
+
+  margin: 75px auto 25px;
+  padding: 25px 0;
+}
+
+header#head {
+  height: 100px;
+  border-bottom: 3px dotted #333;
+
+  margin: 0 15px 25px;
+}
+
+header#head h1 {
+  font-size: 55px;
+  text-align: center;
+
+  margin-top: 15px;
+}
+
+section#main {
+  width: 620px;
+
+  margin: 0 auto;
+}
+
+article.post {
+  width: 610px;
+  border-bottom: 3px dotted #333;
+  
+  margin: 0 5px 25px;
+}
+
+article.post header {
+  padding: 5px auto;
+}
+
+article.post header h1 {
+  font-size: 25px;
+}
+
+article.post header h1 a {
+  text-decoration: none;
+  color: #333;
+}
+
+article.post header h1 a:hover {
+  color: #000;
+}
+
+article.post section.content {
+  min-height: 150px;
+
+  margin: 20px auto 0;
+  padding: 5px 0 5px 25px;
+}
+
+article.post footer div p {
+  text-align: right;
+  font-size: 11px;
+}
+
+article.post footer div.misc {
+  margin: 10px 0;
+}
+
+footer#foot {
+  font-size: 12px;
+
+  padding-left: 15px;
+}

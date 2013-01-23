@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>{% block title %}{% endblock %} {{ g.blogname }}</title>
+    <link rel="stylesheet" href="{{ 'css/style.css' | static_url }}" />
+    {% block afterhead %}{% endblock %}
+  </head>
+  <body>
+    <section class="container">
+      <header id="head">
+        {% block header %}
+        <h1>{{ g.blogname | upper }}</h1>
+        {% endblock %}
+      </header>
+      <section id="main" role="main">
+        {% block main %}{% endblock %}
+      </section>
+      <footer id="foot">
+        {% block footer %}
+          &copy; Copyright 2013 by hbc.
+        {% endblock %}
+      </footer>
+    </section>
+  </body>
+  {% block afterbody %}{% endblock %}
+</html>
