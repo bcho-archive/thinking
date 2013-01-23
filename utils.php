@@ -47,7 +47,7 @@ $url_filter = new Twig_SimpleFilter('url', function($str, $prefix=null,
     } else {
         $base = trim($base, '/') . '/';
     }
-    $str = trim($str, '/');
+    $str = trim($str, '/') . '/';
     return SITE_PATH . 'index.php?s=/' . $base . $prefix . $str;
 });
 $twig->addFilter($url_filter);
