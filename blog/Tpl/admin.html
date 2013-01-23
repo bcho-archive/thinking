@@ -28,8 +28,8 @@
           </tbody>
         </table>
         <div id="op" class="pull-right">
-          <a href="index.php?s=/admin/compose" class="btn btn-success">compose new</a>
-          <a href="index.php?s=/admin/logout" class="btn btn-danger">logout</a>
+          <a href="{{ 'compose' | url(base='admin') }}" class="btn btn-success">compose new</a>
+          <a href="{{ 'logout' | url(base='admin') }}" class="btn btn-danger">logout</a>
         </div>
       </section>
       <footer id="footer"></footer>
