@@ -1,0 +1,18 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>edit {{ post.title }}~ thinking</title>
+    <link rel="stylesheet" href="{{ 'css/admin.css' | static_url }}" />
+  </head>
+  <body>
+    <div class="container">
+      <form action="{{ post.id | url(prefix='edit/id', base='admin') }}" method="post" id="compose">
+        <input name="title" type="text" class="span7" value="{{ post.title }}"/>
+        <textarea id="content" name="content" class="span7">{{ post.content }}</textarea>
+        <input type="hidden" value="{{ post.id }}" name="post_id" />
+        <button class="btn btn-success pull-right">ok</button>
+      </form>
+    </div>
+  </body>
+</html>

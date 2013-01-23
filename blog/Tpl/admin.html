@@ -22,7 +22,10 @@
             <tr>
               <td>{{ post.id }}</td>
               <td>{{ post.title }}</td>
-              <td>edit / delete</td>
+              <td>
+                <a href="{{ post.id | url(prefix='edit/id', base='admin') }}" class="btn">edit</a>
+                <a href="{{ post.id | url(prefix='remove/id', base='admin') }}" class="btn btn-danger">remove</a>
+              </td>
             </tr>
           {% endfor %}
           </tbody>

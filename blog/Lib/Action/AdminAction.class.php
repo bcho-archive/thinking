@@ -66,6 +66,33 @@ class AdminAction extends ThinkingAction {
             $this->display('compose.html');
         }
     }
+
+    public function edit($id=null) {
+        $this->check_login();
+
+        if ($this->isPost()) {
+            $data = array(
+                'id' => $_POST['post_id'],
+                'title' => $_POST['title'],
+                'content' => $_POST['content'],
+                'author_id' => $this->user()['id'],
+            );
+            $post = D('Post')->save($data);
+            $this->redirect('Admin/index');
+        } if ($this->isGet()) {
+            $post = D('Post')->get_post($id);
+            $this->display('edit.html', array('post' => $post));
+        }
+    }
+
+    public function remove($id) {
+        $this->check_login();
+
+        $cond = array('id' => array('eq', $id));
+        $post = D('Post')->where($cond)->delete();
+
+        $this->redirect('Admin/index');
+    }
 }
 
 /* End of file AdminAction.class.php */
